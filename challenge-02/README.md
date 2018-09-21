@@ -75,17 +75,11 @@ Crie uma função com as seguintes características:
 function soma(a, b, c) {
   if(a !== undefined && b === undefined && c === undefined) {
     return a;
-  } else if(a === undefined && b !== undefined && c === undefined) {
-    return b;
-  } else if(a === undefined && b === undefined && c !== undefined) {
-    return c;
-  }  else if(a !== undefined && b !== undefined && c === undefined) {
+  } else if(a !== undefined && b !== undefined && c === undefined) {
     return a + b;
-  }  else if(a === undefined && b !== undefined && c !== undefined) {
-    return b + c;
-  }  else if(a !== undefined && b === undefined && c !== undefined) {
-    return a + c;
-  }  else if(a === undefined && b === undefined && c === undefined) {
+  } else if(a === undefined && b === undefined && c === undefined) {
+    return false;
+  } else if(a !== undefined && b !== undefined && c !== undefined) { 
     return (a + b) / c;
   } else {
     return null;
@@ -98,4 +92,4 @@ function soma(a, b, c) {
 soma(1); //1
 soma(1,2); //3
 soma(1,2,3); //1
-soma(); //null
+soma(); //false
